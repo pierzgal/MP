@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MP_site</title>
+<title>MP_site - GIT – RStudio Tutorial 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,14 +142,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tutorial-deploying-quarto-projects-docs-folder-to-github" id="toc-tutorial-deploying-quarto-projects-docs-folder-to-github" class="nav-link active" data-scroll-target="#tutorial-deploying-quarto-projects-docs-folder-to-github">Tutorial: Deploying Quarto Project’s Docs Folder to GitHub</a>
+  <ul class="collapse">
+  <li><a href="#introduction-to-git-commands" id="toc-introduction-to-git-commands" class="nav-link" data-scroll-target="#introduction-to-git-commands">Introduction to Git Commands</a></li>
+  <li><a href="#deploying-quarto-projects-docs-folder-to-github" id="toc-deploying-quarto-projects-docs-folder-to-github" class="nav-link" data-scroll-target="#deploying-quarto-projects-docs-folder-to-github">Deploying Quarto Project’s Docs Folder to GitHub</a>
+  <ul class="collapse">
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#step-1-configure-quarto-project" id="toc-step-1-configure-quarto-project" class="nav-link" data-scroll-target="#step-1-configure-quarto-project">Step 1: Configure Quarto Project</a></li>
+  <li><a href="#step-2-initialize-git-in-your-local-project" id="toc-step-2-initialize-git-in-your-local-project" class="nav-link" data-scroll-target="#step-2-initialize-git-in-your-local-project">Step 2: Initialize Git in Your Local Project</a></li>
+  <li><a href="#step-3-create-.gitignore-file" id="toc-step-3-create-.gitignore-file" class="nav-link" data-scroll-target="#step-3-create-.gitignore-file">Step 3: Create .gitignore File</a></li>
+  <li><a href="#step-4-render-quarto-project" id="toc-step-4-render-quarto-project" class="nav-link" data-scroll-target="#step-4-render-quarto-project">Step 4: Render Quarto Project</a></li>
+  <li><a href="#step-5-stage-changes" id="toc-step-5-stage-changes" class="nav-link" data-scroll-target="#step-5-stage-changes">Step 5: Stage Changes</a></li>
+  <li><a href="#step-6-commit-changes" id="toc-step-6-commit-changes" class="nav-link" data-scroll-target="#step-6-commit-changes">Step 6: Commit Changes</a></li>
+  <li><a href="#step-7-connect-to-remote-repository" id="toc-step-7-connect-to-remote-repository" class="nav-link" data-scroll-target="#step-7-connect-to-remote-repository">Step 7: Connect to Remote Repository</a></li>
+  <li><a href="#step-8-create-and-switch-to-main-branch" id="toc-step-8-create-and-switch-to-main-branch" class="nav-link" data-scroll-target="#step-8-create-and-switch-to-main-branch">Step 8: Create and Switch to Main Branch</a></li>
+  <li><a href="#step-9-push-to-github" id="toc-step-9-push-to-github" class="nav-link" data-scroll-target="#step-9-push-to-github">Step 9: Push to GitHub</a></li>
+  <li><a href="#step-10-configure-github-pages" id="toc-step-10-configure-github-pages" class="nav-link" data-scroll-target="#step-10-configure-github-pages">Step 10: Configure GitHub Pages</a></li>
+  </ul></li>
+  <li><a href="#github-authentication" id="toc-github-authentication" class="nav-link" data-scroll-target="#github-authentication">GitHub Authentication</a>
+  <ul class="collapse">
+  <li><a href="#option-1-personal-access-token-recommended-for-beginners" id="toc-option-1-personal-access-token-recommended-for-beginners" class="nav-link" data-scroll-target="#option-1-personal-access-token-recommended-for-beginners">Option 1: Personal Access Token (Recommended for beginners)</a></li>
+  <li><a href="#option-2-ssh-key" id="toc-option-2-ssh-key" class="nav-link" data-scroll-target="#option-2-ssh-key">Option 2: SSH Key</a></li>
+  <li><a href="#troubleshooting-authentication-issues" id="toc-troubleshooting-authentication-issues" class="nav-link" data-scroll-target="#troubleshooting-authentication-issues">Troubleshooting Authentication Issues</a></li>
+  </ul></li>
+  <li><a href="#updating-your-website" id="toc-updating-your-website" class="nav-link" data-scroll-target="#updating-your-website">Updating Your Website</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MP_site</h1>
+<h1 class="title">GIT – RStudio Tutorial 1</h1>
 </div>
 
 
@@ -166,16 +196,224 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="tutorial-deploying-quarto-projects-docs-folder-to-github" class="level1">
+<h1>Tutorial: Deploying Quarto Project’s Docs Folder to GitHub</h1>
+<section id="introduction-to-git-commands" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-git-commands">Introduction to Git Commands</h2>
+<p>Before we dive into the specific project, let’s cover the main Git commands you’ll be using:</p>
+<ol type="1">
+<li><p><code>git init</code>: Initializes a new Git repository in the current directory.</p></li>
+<li><p><code>git clone [url]</code>: Creates a copy of a remote repository on your local machine.</p></li>
+<li><p><code>git add [file]</code>: Stages changes for commit. Use <code>git add .</code> to stage all changes.</p></li>
+<li><p><code>git commit -m "[message]"</code>: Creates a new commit with the staged changes and a descriptive message.</p></li>
+<li><p><code>git push [remote] [branch]</code>: Uploads local commits to a remote repository.</p></li>
+<li><p><code>git pull [remote] [branch]</code>: Fetches changes from a remote repository and merges them into your current branch.</p></li>
+<li><p><code>git status</code>: Shows the status of changes as untracked, modified, or staged.</p></li>
+<li><p><code>git branch</code>: Lists all local branches in the repository.</p></li>
+<li><p><code>git checkout -b [branch-name]</code>: Creates a new branch and switches to it.</p></li>
+<li><p><code>git remote add [name] [url]</code>: Adds a new remote repository.</p></li>
+</ol>
+<p>Now, let’s apply these commands to our specific project.</p>
+</section>
+<section id="deploying-quarto-projects-docs-folder-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="deploying-quarto-projects-docs-folder-to-github">Deploying Quarto Project’s Docs Folder to GitHub</h2>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
+<ul>
+<li>An existing Quarto website project on your local machine</li>
+<li>An empty GitHub repository</li>
+<li>RStudio installed on your computer</li>
+<li>Git installed on your computer</li>
+</ul>
+</section>
+<section id="step-1-configure-quarto-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-configure-quarto-project">Step 1: Configure Quarto Project</h3>
+<p>Ensure your Quarto project is set up to render to the <code>docs</code> folder:</p>
+<ol type="1">
+<li>Open your Quarto project in RStudio.</li>
+<li>In your <code>_quarto.yml</code> file, add or modify the following:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-2-initialize-git-in-your-local-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-initialize-git-in-your-local-project">Step 2: Initialize Git in Your Local Project</h3>
+<p>Git command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio: 1. Go to Tools &gt; Version Control &gt; Project Setup 2. Choose “Git” as the version control system 3. Allow RStudio to restart</p>
+</section>
+<section id="step-3-create-.gitignore-file" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-create-.gitignore-file">Step 3: Create .gitignore File</h3>
+<p>To ensure we only push the <code>docs</code> folder, create a <code>.gitignore</code> file in your project root:</p>
+<p>Git command:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"*</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="st">!docs/</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="st">!.gitignore"</span> <span class="op">&gt;</span> .gitignore</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio: 1. File &gt; New File &gt; Text File 2. Add the following content: <code>*    !docs/    !.gitignore</code> 3. Save as <code>.gitignore</code> in the project root</p>
+<p>This <code>.gitignore</code> file tells Git to ignore everything except the <code>docs</code> folder and the <code>.gitignore</code> file itself.</p>
+</section>
+<section id="step-4-render-quarto-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-render-quarto-project">Step 4: Render Quarto Project</h3>
+<p>In RStudio: 1. Click the “Render” button, or 2. In the Console, run: <code>r    quarto render</code></p>
+<p>This will create or update the <code>docs</code> folder with your rendered website.</p>
+</section>
+<section id="step-5-stage-changes" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-stage-changes">Step 5: Stage Changes</h3>
+<p>Git command:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add docs/ .gitignore</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio: In the Git pane, check the boxes next to the <code>docs</code> folder and <code>.gitignore</code> file.</p>
+</section>
+<section id="step-6-commit-changes" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-commit-changes">Step 6: Commit Changes</h3>
+<p>Git command:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add rendered website files and .gitignore"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio: 1. Click the “Commit” button in the Git pane 2. Enter a commit message 3. Click “Commit”</p>
+</section>
+<section id="step-7-connect-to-remote-repository" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-connect-to-remote-repository">Step 7: Connect to Remote Repository</h3>
+<p>Git command:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin https://github.com/yourusername/your-repo-name.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio: In the Console, run:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">'git remote add origin https://github.com/yourusername/your-repo-name.git'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace the URL with your actual GitHub repository URL.</p>
+</section>
+<section id="step-8-create-and-switch-to-main-branch" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-create-and-switch-to-main-branch">Step 8: Create and Switch to Main Branch</h3>
+<p>Git command:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio: In the Console, run:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">"git checkout -b main"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="step-9-push-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="step-9-push-to-github">Step 9: Push to GitHub</h3>
+<p>Git command:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio: 1. Click the “Push” button in the Git pane 2. For the first push, in the Console, run: <code>r    system('git push -u origin main')</code></p>
+</section>
+<section id="step-10-configure-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="step-10-configure-github-pages">Step 10: Configure GitHub Pages</h3>
+<ol type="1">
+<li>Go to your GitHub repository in a web browser</li>
+<li>Click on “Settings”</li>
+<li>In the left sidebar, click on “Pages”</li>
+<li>Under “Source”, select “Deploy from a branch”</li>
+<li>Under “Branch”, select “main” and “/docs” folder</li>
+<li>Click “Save”</li>
+</ol>
+<p>Your Quarto website should now be live at <code>https://yourusername.github.io/your-repo-name/</code>.</p>
+</section>
+</section>
+<section id="github-authentication" class="level2">
+<h2 class="anchored" data-anchor-id="github-authentication">GitHub Authentication</h2>
+<p>When working with GitHub from RStudio, you’ll need to authenticate to push changes to your remote repository. GitHub no longer supports password authentication for Git operations, so you’ll need to use a personal access token or SSH key. Here’s how to set up authentication:</p>
+<section id="option-1-personal-access-token-recommended-for-beginners" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-personal-access-token-recommended-for-beginners">Option 1: Personal Access Token (Recommended for beginners)</h3>
+<ol type="1">
+<li>Generate a Personal Access Token (PAT) on GitHub:
+<ul>
+<li>Go to GitHub.com and log in</li>
+<li>Click on your profile picture &gt; Settings &gt; Developer settings &gt; Personal access tokens</li>
+<li>Click “Generate new token”</li>
+<li>Give your token a descriptive name</li>
+<li>Select the necessary scopes (at minimum, select “repo”)</li>
+<li>Click “Generate token”</li>
+<li>Copy the token immediately (you won’t be able to see it again)</li>
+</ul></li>
+<li>Store the PAT in RStudio:
+<ul>
+<li><p>In RStudio, install the <code>usethis</code> package if you haven’t already:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Run the following command to open your Git credentials file:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">edit_git_config</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Add the following lines, replacing <code>YOUR_TOKEN</code> with your actual token:</p>
+<pre><code>[github]
+   token = YOUR_TOKEN</code></pre></li>
+<li><p>Save and close the file</p></li>
+</ul></li>
+<li>Use the token:
+<ul>
+<li>RStudio will now use this token automatically when pushing to GitHub</li>
+<li>If prompted for a password, use the token instead</li>
+</ul></li>
+</ol>
+</section>
+<section id="option-2-ssh-key" class="level3">
+<h3 class="anchored" data-anchor-id="option-2-ssh-key">Option 2: SSH Key</h3>
+<ol type="1">
+<li>Generate an SSH key pair:
+<ul>
+<li><p>In RStudio’s Terminal, run:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"your_email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Press Enter to accept the default file location</p></li>
+<li><p>Enter a secure passphrase (or press Enter for no passphrase)</p></li>
+</ul></li>
+<li>Add the SSH key to the ssh-agent:
+<ul>
+<li><p>Start the ssh-agent:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Add your SSH private key to the ssh-agent:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+<li>Add the public key to your GitHub account:
+<ul>
+<li><p>Copy the public key to your clipboard:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Go to GitHub.com and log in</p></li>
+<li><p>Click on your profile picture &gt; Settings &gt; SSH and GPG keys</p></li>
+<li><p>Click “New SSH key”</p></li>
+<li><p>Paste your key into the “Key” field</p></li>
+<li><p>Give your key a descriptive title</p></li>
+<li><p>Click “Add SSH key”</p></li>
+</ul></li>
+<li>Use SSH URL for your repository:
+<ul>
+<li><p>When adding the remote repository, use the SSH URL instead of HTTPS:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:yourusername/your-repo-name.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+</ol>
+</section>
+<section id="troubleshooting-authentication-issues" class="level3">
+<h3 class="anchored" data-anchor-id="troubleshooting-authentication-issues">Troubleshooting Authentication Issues</h3>
+<p>If you encounter authentication issues:</p>
+<ol type="1">
+<li><p>Verify your credentials:</p>
+<ul>
+<li>For PAT: Check if the token is still valid on GitHub</li>
+<li>For SSH: Ensure your SSH key is added to your GitHub account</li>
+</ul></li>
+<li><p>Reset credentials:</p>
+<ul>
+<li>On Windows: Search for “Credential Manager” and remove any GitHub entries</li>
+<li>On macOS: Use Keychain Access to remove any GitHub entries</li>
+</ul></li>
+<li><p>Use the <code>git</code> credential helper:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper cache</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will cache your credentials for a short time, reducing the number of times you need to enter them.</p></li>
+<li><p>If using HTTPS, ensure you’re not being prompted for a username. Your username should be your GitHub username or the email associated with your GitHub account.</p></li>
+</ol>
+<p>By following these authentication steps, you should be able to securely push your Quarto project to GitHub from RStudio. Remember to keep your PAT or SSH private key secure and never share them publicly.</p>
+</section>
+</section>
+<section id="updating-your-website" class="level2">
+<h2 class="anchored" data-anchor-id="updating-your-website">Updating Your Website</h2>
+<p>For future updates:</p>
+<ol type="1">
+<li>Make changes to your Quarto project</li>
+<li>Render the project (Step 4)</li>
+<li>Stage changes (Step 5)</li>
+<li>Commit changes (Step 6)</li>
+<li>Push changes (Step 9)</li>
+</ol>
+<p>GitHub will automatically update your published site after you push changes.</p>
+<p>Remember to pull any changes if you’re working on multiple machines:</p>
+<p>Git command:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio: Click the “Pull” button in the Git pane</p>
+<p>This revised tutorial focuses on pushing only the <code>docs</code> folder to your GitHub repository and includes an introduction to the main Git commands. The <code>.gitignore</code> file ensures that only the necessary files are tracked and pushed to GitHub.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
